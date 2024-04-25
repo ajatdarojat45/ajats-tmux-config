@@ -68,6 +68,12 @@ bind-key -T copy-mode-vi 'C-\' select-pane -l
 run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
+Reload TMUX environment so TPM is sourced:
+```.tmux.conf
+# type this in terminal if tmux is already running
+tmux source ~/.tmux.conf
+```
+
 #### Installing plugins
 Press `prefix` + `I` (capital i, as in Install) to fetch the plugin.
 > I map the `prefix` to the `control + a`
