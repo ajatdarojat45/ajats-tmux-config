@@ -41,6 +41,7 @@ set  -g default-terminal "tmux-256color"
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
+set -g @plugin 'ajatdarojat45/tmux-snazzy-theme'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 
 
