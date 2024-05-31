@@ -48,7 +48,7 @@ set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'christoomey/vim-tmux-navigator' 
 # set -g @plugin 'jaketrent/tmux-snazzy'
 # set -g @plugin 'dracula/tmux'
-set -g @plugin 'ajatdarojat45/tmux-snazzy-theme'
+set -g @plugin 'ajatdarojat45/tmux-tokyonight'
 
 
 ### Tokyo Night Theme configuration
