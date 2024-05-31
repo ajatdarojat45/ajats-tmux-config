@@ -34,6 +34,10 @@ Create `.tmux.config` file within root directory and put this code:
 ```
 set -g prefix ^a
 set -g mouse on
+#set -g @tpm-clean 'u'
+#set -g default-terminal "xterm"
+#set -g default-terminal "xterm-256color"
+#TERM=screen-256color
 set -ag terminal-overrides ",xterm-256color:RGB"
 set  -g default-terminal "tmux-256color"
 
@@ -41,9 +45,17 @@ set  -g default-terminal "tmux-256color"
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
+set -g @plugin 'christoomey/vim-tmux-navigator' 
+# set -g @plugin 'jaketrent/tmux-snazzy'
+# set -g @plugin 'dracula/tmux'
 set -g @plugin 'ajatdarojat45/tmux-snazzy-theme'
-set -g @plugin 'christoomey/vim-tmux-navigator'
 
+
+### Tokyo Night Theme configuration
+#set -g @plugin 'fabioluciano/tmux-tokyo-night'
+#set -g @theme_variation 'moon'
+#set -g @theme_left_separator ''
+#set -g @theme_right_separator ''
 
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
@@ -67,6 +79,8 @@ bind-key -T copy-mode-vi 'C-\' select-pane -l
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
+
+bind r run '~/.tmux/plugins/tpm/scripts/clean_plugins.sh'
 ```
 
 Reload TMUX environment so TPM is sourced:
